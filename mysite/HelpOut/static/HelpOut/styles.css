@@ -1,0 +1,35 @@
+body{
+  background-color: #fff;
+}
+
+.backgroundImg{
+  margin-top:100px;
+}
+
+h1{
+  font-size:3rem;
+}
+.bigText{
+  margin-top:40px;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-size: 5rem;
+}
+
+.iconz{
+  margin-left: 20px;
+  color:#51adcf;
+}
+
+.introd{
+  padding-left: 0px;
+  font-size: 1rem;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.help{
+  position: absolute;
+  margin-top:500px;
+  margin-left:60%;
+}
