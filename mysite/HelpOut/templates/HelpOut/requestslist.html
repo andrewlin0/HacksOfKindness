@@ -8,37 +8,43 @@
 
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Polls App</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <a class="navbar-brand" href="#"><i class="fas fa-hands-helping"></i>HelpOut</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="#">Questions</a>
-          <a class="nav-item nav-link" href="#">Comments</a>
-        </div>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="http://127.0.0.1:8000/HelpOut">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:8000/HelpOut/postedRequests/">Give Help!</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:8000/HelpOut/gethelp/">Get Help!</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">My Profile</a>
+          </li>
+        </ul>
       </div>
-</nav>
-      <h3 style="text-align:center">Welcome to the comments page!</h3>
+    </nav>
+
+      <h3 style="text-align:center">Help a neighbor in need!</h3>
       <div class="d-flex justify-content-center">
       {% if latest_comment_list %}
           <ul class = "list-group">
           {% for comment in latest_comment_list %}
-              <li class="list-group-item">{{ comment.requestText }}</li>
-          {% endfor %}
+              <li class="list-group-item"><a href="https://www.youtube.com">{{ comment.requestText }}</a></li>
+          {% endfor %} 
           </ul>
       {% else %}
-          <p>No comments have been submitted yet.</p>
+          <p>Nobody needs help right now.</p>
       {% endif %}
       </div>
 
-      <footer class="footer">
-            <div class="container">
-              <h4 class="text-muted" >Copyright 2020 Ali Ibrahim Developments.</h4>
-            </div>
-          </footer>
+
 
 
 
